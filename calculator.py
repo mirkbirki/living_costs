@@ -74,13 +74,13 @@ if maintenance_support == "yes":
 else:
     maintenance_support = 0
 
-reserved_amount = normal_amount + living_cost
+reserved_amount = normal_amount + living_cost - child_benefit - maintenance_support
 
-result = monthly_income + child_benefit + maintenance_support - reserved_amount
+result = monthly_income - reserved_amount
 
-print("Net salary:", salary)
-print("Other income:", other_income)
-print("Income from business:", income_from_business)
+print("Monthly net salary:", salary)
+print("Other monthly net income:", other_income)
+print("Monthly net income from business:", income_from_business)
 print("Fortune/month:", fortune/48)
 print("Monthly household income:", monthly_income)
 
